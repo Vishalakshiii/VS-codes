@@ -1,0 +1,47 @@
+#include<iostream>
+#include <iomanip>
+using namespace std;
+class Time
+{
+    private:
+    int hrs;
+    int min;
+    int sec;
+     public:
+     void getTime();
+   void setTime();
+      void TotalTime();
+};
+void Time::getTime(void){
+ cout<<"Enter time:"<<endl;
+    cout<<"\nHours = ";
+    cin>>hrs;
+    cout<<"\n Minutes = ";
+    cin>>min;
+    cout<<"\n Seconds = ";
+    cin>>sec;
+    
+    }
+
+    void Time::setTime(void){
+      cout<<"\n Time after add:0"<<hrs<<":0"<<min<<":0"<<sec<<endl;
+       
+    }
+void Time::TotalTime(void){
+
+int a,b ;
+a=hrs*60*60;
+b=min*60;
+cout<<"Total time:"<<a+b+sec<<endl;
+ 
+};
+int main(){
+   
+   Time t1;
+   t1.getTime();
+   t1.setTime();
+   t1.TotalTime();
+
+   return 0;
+
+}
